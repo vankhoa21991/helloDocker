@@ -11,13 +11,14 @@ spec:
     spec:
       containers:
         - name: train-schedule
-          image: loup21991/train-schedule:latest
+          image: loup21991/hellodocker
           imagePullPolicy: Always
           ports:
-            - containerPort: 3000
+            - containerPort: 5000
           env:
             - name: ALLOW_EMPTY_PASSWORD
               value: "yes"
   selector:
     matchLabels:
       app: ab
+
