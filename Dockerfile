@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Expose port 5000 to the outside world
+# Expose port 8501 to the outside world
 EXPOSE 5000
 
 # Define the command to run the application
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "app.py", "--server.port=5000", "--server.address=0.0.0.0"]
